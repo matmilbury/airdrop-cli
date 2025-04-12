@@ -22,7 +22,7 @@ So I've tried [dieperse.app](https://disperse.app/). Same result - a bug prevent
 
 I don't know if it was because it was Friday, or I had a bad luck, or what happened but I hated a thought of having to rely on these external tools to do my work.
 
-I simply wanted a simple cli tool that takes my csv and creates an airdrop transaction I can sign with my wallet.
+I simply wanted a cli tool that takes my csv and creates an airdrop transaction I can sign with my wallet.
 
 And that is Airdrop CLI.
 
@@ -54,7 +54,7 @@ Secondly, I don't so this tool is not and will not support Windows – at least 
 
 ## Use
 
-Please don't use it. For now.
+Please don't. For now.
 
 ## Support
 
