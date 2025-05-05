@@ -676,7 +676,7 @@
 
     "valtio": ["valtio@1.11.2", "", { "dependencies": { "proxy-compare": "2.5.1", "use-sync-external-store": "1.2.0" }, "peerDependencies": { "@types/react": ">=16.8", "react": ">=16.8" }, "optionalPeers": ["@types/react", "react"] }, "sha512-1XfIxnUXzyswPAPXo1P3Pdx2mq/pIqZICkWN60Hby0d9Iqb+MEIpqgYVlbflvHdrp2YR/q3jyKWRPJJ100yxaw=="],
 
-    "viem": ["viem@2.28.0", "", { "dependencies": { "@noble/curves": "1.8.2", "@noble/hashes": "1.7.2", "@scure/bip32": "1.6.2", "@scure/bip39": "1.5.4", "abitype": "1.0.8", "isows": "1.0.6", "ox": "0.6.9", "ws": "8.18.1" }, "peerDependencies": { "typescript": ">=5.0.4" }, "optionalPeers": ["typescript"] }, "sha512-Z4W5O1pe+6pirYTFm451FcZmfGAUxUWt2L/eWC+YfTF28j/8rd7q6MBAi05lMN4KhLJjhN0s5YGIPB+kf1L20g=="],
+    "viem": ["viem@2.28.4", "", { "dependencies": { "@noble/curves": "1.8.2", "@noble/hashes": "1.7.2", "@scure/bip32": "1.6.2", "@scure/bip39": "1.5.4", "abitype": "1.0.8", "isows": "1.0.6", "ox": "0.6.9", "ws": "8.18.1" }, "peerDependencies": { "typescript": ">=5.0.4" }, "optionalPeers": ["typescript"] }, "sha512-X/UTf3NX5mzh74tBsoZEGDAVqC8UrUxhRJw4nDfJwuFmZoszqaO9Ht1Wjs8z8JmnUENmAkP91WJBwfTua5KkaQ=="],
 
     "webextension-polyfill": ["webextension-polyfill@0.10.0", "", {}, "sha512-c5s35LgVa5tFaHhrZDnr3FpQpjj1BB+RXhLTYUxGqBVN460HkbM8TBtEqdXWbpTKfzwCcjAZVF7zXCYSKtcp9g=="],
 
