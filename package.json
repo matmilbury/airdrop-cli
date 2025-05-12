@@ -12,7 +12,7 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@inquirer/prompts": "^7.5.0",
+    "@inquirer/prompts": "^7.5.1",
     "@wagmi/connectors": "^5.8.1",
     "@wagmi/core": "^2.17.1",
     "dotenv": "^16.5.0",
