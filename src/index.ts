@@ -191,11 +191,8 @@ async function airdrop({
   });
 
   const recipients = data.map(({ address }) => address);
-  const amounts = data.map(({ amount }) => parseUnits(String(amount), 18));
-  const total = data.reduce(
-    (acc, { amount }) => acc + parseUnits(String(amount), 18),
-    0n,
-  );
+  const amounts = data.map(({ amount }) => amount);
+  const total = data.reduce((acc, { amount }) => acc + amount, 0n);
 
   // TODO simulate the transaction first
   const txHash = await gasliteDrop.write.airdropERC20(
