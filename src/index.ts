@@ -140,10 +140,12 @@ function dryRun({
     // TODO format numbers, eg. 12000 -> 12,000
     `Your current allowance:\t${currentAllowance === maxUint256 ? "infinite" : formatUnits(currentAllowance, token.decimals)}`,
     `Transfers:`,
-    data.map(
-      ({ address, amount }) =>
-        `${address}\t${formatUnits(amount, token.decimals)}`,
-    ),
+    data
+      .map(
+        ({ address, amount }) =>
+          `${address}\t${formatUnits(amount, token.decimals)}`,
+      )
+      .join("\n"),
     `Next up:`,
     ...(sum > currentAllowance ? [` - Increase allowance`] : []),
     ` - Perform an airdrop`,
