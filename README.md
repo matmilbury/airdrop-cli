@@ -73,7 +73,7 @@ Please use [discussions](https://github.com/matmilbury/airdrop-cli/discussions) 
 - [x] construct a transaction that airdrops USDT on BSC
 - [x] sign and broadcast transactions with [frame](https://frame.sh)
 - [ ] read csv file from any location
-- [ ] Support more chains (Ethereum, Sepolia, Arbitrum, Optimism, Polygon, Base, Base Sepolia, Blast, Zora, Degen, Sanko, Apechain)
+- [x] Support more chains
 - [ ] Support all most popular tokens for each chain
 - [ ] Support any arbitrary ERC-20 token
 - [ ] Support native coins for each chain
