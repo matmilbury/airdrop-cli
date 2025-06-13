@@ -97,6 +97,7 @@ Please use [discussions](https://github.com/matmilbury/airdrop-cli/discussions) 
 - [ ] improve number formatting
 - [ ] use proper logging
 - [ ] render loading indicators
+- [x] basic batching (500 transfers per batch for each token on each chain)
 - [ ] split large amount of recipients into batches automatically based on the `transfer` gas cost of a particular token as well as block size limits of a particular chain.
 - [ ] detect and merge duplicates
 - [ ] Support airdrops from Safe Wallet

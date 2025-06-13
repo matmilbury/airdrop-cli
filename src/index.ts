@@ -222,19 +222,7 @@ async function main() {
     ...entry,
     amount: parseUnits(entry.amount, token.decimals),
   }));
-  const airdropSum = calculateAirdropSum(data);
-  const currentAllowance = await fetchAllowance({
-    token,
-    gasliteDropAddress: contractAddress,
-  });
-  dryRun({
-    chain,
-    currentAllowance,
-    token,
-    data,
-    sum: airdropSum,
-  });
-  // TODO continue? Y/n
+
   const customProvider = getProvider();
   // TODO handle UserRejectedRequestError
   const client = getClient({ customProvider, chain });
@@ -243,20 +231,44 @@ async function main() {
 
   await client.switchChain(chain);
 
-  // TODO if not enough allowance, ask for it and display a loader
-  const txReceipt = await airdrop({
-    data,
-    token,
-    client,
-    userAddress,
-    contractAddress,
-    chain,
-  });
+  const TRANSFERS_PER_BATCH = 500;
+  const batchCount = Math.ceil(data.length / TRANSFERS_PER_BATCH);
 
-  if (chain.blockExplorers) {
-    console.log(
-      `${chain.blockExplorers.default.url}/tx/${txReceipt.transactionHash}`,
+  for (let i = 0; i < batchCount; i++) {
+    const batchData = data.slice(
+      i * TRANSFERS_PER_BATCH,
+      (i + 1) * TRANSFERS_PER_BATCH,
     );
+
+    const airdropSum = calculateAirdropSum(batchData);
+    const currentAllowance = await fetchAllowance({
+      token,
+      gasliteDropAddress: contractAddress,
+    });
+    dryRun({
+      chain,
+      currentAllowance,
+      token,
+      data: batchData,
+      sum: airdropSum,
+    });
+    // TODO continue? Y/n
+
+    // TODO if not enough allowance, ask for it and display a loader
+    const txReceipt = await airdrop({
+      data: batchData,
+      token,
+      client,
+      userAddress,
+      contractAddress,
+      chain,
+    });
+
+    if (chain.blockExplorers) {
+      console.log(
+        `${chain.blockExplorers.default.url}/tx/${txReceipt.transactionHash}`,
+      );
+    }
   }
 
   customProvider.close();
