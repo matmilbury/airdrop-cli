@@ -6,15 +6,15 @@
   "devDependencies": {
     "@types/bun": "latest",
     "@types/papaparse": "^5.3.16",
-    "@wagmi/cli": "^2.3.1"
+    "@wagmi/cli": "^2.3.2"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "@inquirer/prompts": "^7.5.3",
-    "@wagmi/connectors": "^5.8.5",
-    "@wagmi/core": "^2.17.3",
+    "@inquirer/prompts": "^7.8.0",
+    "@wagmi/connectors": "^5.9.1",
+    "@wagmi/core": "^2.18.1",
     "dotenv": "^16.5.0",
     "eth-provider": "^0.13.7",
     "fuse.js": "^7.1.0",
